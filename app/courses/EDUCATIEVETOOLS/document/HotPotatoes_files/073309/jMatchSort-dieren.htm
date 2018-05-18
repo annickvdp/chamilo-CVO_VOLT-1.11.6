@@ -1,0 +1,2092 @@
+<?xml version="1.0"?>
+       <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+       <html xmlns="http://www.w3.org/1999/xhtml"
+             xml:lang="en"><head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Annick Vdp."></meta><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"></meta>
+
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC:Creator" content="Annick Vdp" />
+<meta name="DC:Creator" content="linde" />
+<meta name="DC:Title" content="Dierenrijk" />
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<!-- JMatch_Sort v1.4.2 (test or practice mode with auto-highlighting of wrong items in strUserDefined3) 
+  - A categorisation type of exercise with JMatch drag-drop for HotPotatoes v6 by Agnes Simonet, August 2012 -->
+<title>
+Dierenrijk
+</title>
+
+<!-- Made with executable version 6.3 Release 0 Build 5 -->
+	
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+
+
+<style type="text/css">
+
+
+/* This is a modified CSS3 stylesheet for rounded corners of buttons,
+the layout boxes and the input boxes in the exercise,
+as well as dropshadows on buttons and draggable cards in JMix drag and drop */
+
+   /* Modified by Stan Bogdanov - stanbogdanov@yahoo.com */
+  /*  hp6.cs_            */ 
+ /*  v1.5.2             */
+/*  24 January 2013    */  
+
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 6.3 Release 0 Build 5 */
+/* Aanpassingen Annick:
+	div.feedback: remove absolute positioning, add text-align left, padding 6px, change border-color, clear both
+	remove shadows-shades
+	change text-align left div.title, div.stdDiv
+	change font-size ExerciseTitle
+	div.stdDiv image margin and overflow 
+	changes made to left and right container
+	cardstyle z-index -1
+	navbarstyle: no shade, colors
+	COLORS ZWARTER 
+		change strTitleColor to #09F to #3757f7
+		change color ExerciseSubtitle to #333333
+		background white body, stdDiv, feedback
+		change strTextColor #333333, maar border-color #666
+		change colors buttons
+	WIDTH
+		change width to 800px for div.feedback, div.titles, div.StdDiv, body
+	TABLE
+	    change table formatting jmatch (standard): left and rightitem: change padding
+
+*/
+
+/* Hack to hide a nested Quicktime player from IE, which can't handle it. */
+* html object.MediaPlayerNotForIE {
+	display: none;
+}
+
+body{
+	font-family: Geneva,Arial;
+	background-color: #FFF;
+	color: #333333 ;
+	background-image: url(achtergrond.gif); 
+	margin-right: 1%;
+	margin-left: 1%;
+	font-size: small;
+	width: 800px;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 100%;
+}
+
+table,div,span,td{
+	font-size: 100%;
+	color: #333333;
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: left;
+	color: #3757f7;
+	width: 800px;
+}
+
+button{
+	font-family: Geneva,Arial;
+	font-size: 100%;
+	display: inline;
+/* Stan_Rounded buttons */
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 4px 17px;
+	margin:2px;
+/* Stan_Rounded buttons  END*/
+}
+
+button:link,
+button:visited,
+button:hover,
+button:focus,
+button:active {
+	outline: none;
+}
+
+
+.ExerciseTitle{
+	font-size: 150%;
+	color: #3757f7;
+}
+
+.ExerciseSubtitle{
+	font-size: 100%;
+	color: #333333;
+}
+
+div.StdDiv{
+	background-color: #fff;
+	text-align: left;
+	font-size: 100%;
+	color: #333333;
+	padding: 0.5em;
+	border: 1px solid #ccc;
+	margin-bottom: 1px;
+	width: 800px;
+	overflow: hidden;
+/*Stan Rounded corners of layout boxes */	
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+/*Stan Rounded corners of layout boxes */	
+}
+
+div.StdDiv img{
+	margin-right: 10px;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", Geneva,Arial; 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", Geneva,Arial; 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", Geneva,Arial;
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: #3757f7;
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: #3757f7;
+/* Stan  rounded corners of timer */	
+ -khtml-border-radius: 10px;
+ -moz-border-radius: 15px;
+ -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /* Stan  rounded corners of timer end */
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: #3757f7;
+}
+
+.LeftItem{
+	font-size: 100%;
+	color: #333333;
+	text-align: left;
+	padding: 4px 10px 4px 10px;
+	background-color: #E0E0E0;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 100%;
+	color: #333333;
+	padding: 4px 10px 4px 2px;
+	text-align: left;
+}
+#Questions td {
+	min-width: 15px;
+}
+
+span.CorrectMark{
+	
+}
+
+
+input, textarea{
+	font-family: Verdana,Geneva,Arial,sans-serif;
+	font-size: 100%;
+
+/* Stan_rounded border of input boxes and textarea */
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px;
+	border:1px solid silver;
+/* Stan_rounded border of input boxes and textarea END */
+}
+
+/* Stan_rounded focus border of input boxes and textarea */
+
+input:focus, textarea:focus {
+	outline: none; 
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px;
+	border:1px solid silver;
+/* Stan rounded focus border of input boxes and textarea end 8 December 2012 */	
+
+	}
+	
+select{
+	font-size: 100%;
+	/* Stan - Rounded menu */
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 3px 2px 3px 5px;
+	border: 1px solid silver;
+/* Stan - Rounded menu END */
+}
+
+select:focus {
+outline:none;
+}
+
+div.Feedback, #FeedbackDiv  {
+	background-color: #fff;
+	z-index: 105;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #CCC;
+	padding: 6px;
+	color: #3757f7;
+	display: none;
+	font-size: 100%;
+	text-align: left;
+	width: 800px;
+	clear: both;
+/* Stan_rounded border of feedback box */
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+/* Stan_rounded border of fixed box END */
+}
+
+.Feedbackmatch {
+	position: absolute;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: #333333;
+}
+
+.FuncButton {
+	text-align: center;
+	border: 1px solid silver;
+	margin-right:2px;
+
+	border-left-color: #CCC;
+	border-top-color: #CCC;
+	border-right-color: #666;
+	border-bottom-color: #666;
+	color: #333333;
+	background-color: #E5E5E5;
+
+	padding: 3px 6px 3px 6px;
+	cursor: pointer;
+}
+
+.FuncButtonUp {
+	text-align: center;
+	border: 1px solid silver;
+	margin-right:2px;
+
+	border-left-color: #CCC;
+	border-top-color: #CCC;
+	border-right-color: #666;
+	border-bottom-color: #666;
+
+	background-color: #999;
+	color: #FFF;
+
+	padding: 3px 6px 3px 6px;
+	cursor: pointer;
+}
+
+.FuncButtonDown {
+	text-align: center;
+	border:1px solid silver;
+	margin-right:2px;
+
+	border-left-color: #666;
+	border-top-color: #666;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	background-color: #999;
+	color: #FFF;
+
+
+	padding: 3px 6px 3px 6px;
+	cursor: pointer;
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	width: 810px;
+	background-color: #E6E6E6;
+	border: 1px solid #999;
+	text-align: center;
+	margin: 20px 0px 0px 0px;
+	clear: both;
+	font-size: 100%;
+
+/* Stan Rounded corner of Nav Bar */	
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+/* Stan Rounded corner of Nav Bar  end */
+padding:1px;
+}
+
+.NavButton {
+	border: 1px solid silver;
+	
+	border-left-color: #CCC;
+	border-top-color: #CCC;
+	border-right-color: #666;
+	border-bottom-color: #666;
+	color: #333333;
+	background-color: #E5E5E5;
+
+	cursor: pointer;		
+}
+
+.NavButtonUp {
+	border:1px solid silver;
+
+	border-left-color: #CCC;
+	border-top-color: #CCC;
+	border-right-color: #666;
+	border-bottom-color: #666;
+	background-color: #999;
+	color: #FFF;
+
+	cursor: pointer;		
+}
+
+.NavButtonDown {
+	border: 1px solid silver;
+
+	border-left-color: #666;
+	border-top-color: #666;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	background-color: #999;
+	color: #FFF;
+
+	cursor: pointer;
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: #000;
+}
+
+a:visited{
+	color: #000;
+}
+
+a:hover{
+	color: #000;
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: Geneva,Arial;
+	font-size: 100%;
+	padding: 5px;
+	border: 1px solid silver;
+	color: #333333;
+	background-color: #E0E0E0;
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	z-index:-1;
+}
+
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+#CheckButtonDiv {
+	margin-top:0.5em;
+	text-align:center;
+}
+
+/* *********** ajoutÐ¹ par AS pour JMatch_Box ********* */
+
+div.CardStyleFC {
+	position: absolute;
+	font-family: Geneva,Arial;
+	font-size: 130%;
+	font-weight: bold;
+	padding: 5px;
+	border: 1px solid #ccc;
+	background-color: #CECFFF;
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	text-align : center;
+	
+/* Stan_rounded border of cards */
+	-khtml-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+/* Stan_rounded border of cards END */
+}
+
+div.CardStyleRC {
+	position: absolute;
+	font-family: Geneva,Arial;
+	font-size: 100%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	background-color: #F2F2F2;  /* Visited Link colour for the background of the categories containers*/
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	text-align : center;
+	
+/* Stan_rounded border of cards */
+	-khtml-border-radius: 0px 0px 5px 5px;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;
+/* Stan_rounded border of cards END */
+}
+
+div.CardStyleDC {
+	position: absolute;
+	font-family: Geneva,Arial;
+	font-size: 100%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	background-color: #F66;
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	text-align : center;
+
+	/* Stan_rounded border of cards */
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+/* Stan_rounded border of cards END */
+}
+/* ************ fin de l'ajout ************* */ 
+
+
+</style>
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+<!--
+
+
+//MDH_SCORM modification to support SCORM 1.2 functionality on LMS
+/* JavaScript to find the SCORM API if it is available */
+/* Based on a model at <http://www.claroline.net/doc/en/index.php/How_do_I_create_SCORM_content%3F> */
+
+var API = null; /* SCORM API */
+
+/* look up through the frameset hierarchy for the SCORM API */
+function findAPI(win)
+{
+	while ((win.API == null) && (win.parent != null) && (win.parent != win))
+	{
+		win = win.parent;
+	}
+	API = win.API;
+}
+
+/* initialize the SCORM API */
+function initAPI(win)
+{
+	/* look for the SCORM API up in the frameset */
+	findAPI(win);
+
+	/* if we still have not found the API, look at the opener and its frameset */
+	if ((API == null) && (win.opener != null))
+	{
+		findAPI(win.opener);
+	}
+}
+
+var ScormSubmitted = false; //use this to check whether LMSFinish has been called later.
+
+function ScormStartUp(){
+	initAPI(window);
+	if (API != null){
+		API.LMSInitialize(''); 
+		API.LMSSetValue('cmi.core.lesson_status', 'browsed');
+		API.LMSSetValue('cmi.core.score.min', 0);
+		API.LMSSetValue('cmi.core.score.max', 100);
+		API.LMSCommit('');
+	}
+}
+
+function CheckLMSFinish(){
+	if (API != null){
+		if (ScormSubmitted == false){
+			API.LMSCommit('');
+			API.LMSFinish('');
+			ScormSubmitted = true;
+		}
+	}
+}
+
+function SetScormIncomplete(){
+	if (ScormSubmitted == true){
+		return;
+	}
+	SetScormScore();
+	if (API != null){
+		API.LMSSetValue('cmi.core.lesson_status', 'incomplete');
+		API.LMSSetValue('cmi.core.session_time', MillisecondsToTime((new Date()).getTime() - ScormStartTime));
+		API.LMSCommit('');
+	}
+}
+
+function SetScormComplete(){
+	if (API != null){
+		API.LMSSetValue('cmi.core.session_time', MillisecondsToTime((new Date()).getTime() - ScormStartTime));
+		API.LMSSetValue('cmi.core.lesson_status', 'completed');
+		SetScormScore();
+		API.LMSCommit('');
+		API.LMSFinish('');
+		ScormSubmitted = true;
+	}
+}
+
+var ScormStartTime = (new Date()).getTime();
+
+var SuspendData = '';
+
+function SetScormTimedOut(){
+	if (API != null){
+		if (ScormSubmitted == false){
+			SetScormScore();
+			API.LMSSetValue('cmi.core.exit', 'time-out'); 
+			API.LMSCommit('');
+			CheckLMSFinish();
+		}
+	}
+}
+
+//TIME RENDERING FUNCTION
+function MillisecondsToTime(Seconds){
+	Seconds = Math.round(Seconds/1000);
+	var S = Seconds % 60;
+	Seconds -= S;
+	if (S < 10){S = '0' + S;}
+	var M = (Seconds / 60) % 60;
+	if (M < 10){M = '0' + M;}
+	var H = Math.floor(Seconds / 3600);
+	if (H < 10){H = '0' + H;}
+	return H + ':' + M + ':' + S;
+}
+
+
+
+
+function Client(){
+//if not a DOM browser, hopeless
+	this.min = false; if (document.getElementById){this.min = true;};
+
+	this.ua = navigator.userAgent;
+	this.name = navigator.appName;
+	this.ver = navigator.appVersion;  
+
+//Get data about the browser
+	this.mac = (this.ver.indexOf('Mac') != -1);
+	this.win = (this.ver.indexOf('Windows') != -1);
+
+//Look for Gecko
+	this.gecko = (this.ua.indexOf('Gecko') > 1);
+	if (this.gecko){
+		this.geckoVer = parseInt(this.ua.substring(this.ua.indexOf('Gecko')+6, this.ua.length));
+//		if (this.geckoVer < 20020000){this.min = false;}
+	}
+	
+//Look for Firebird
+	this.firebird = (this.ua.indexOf('Firebird') > 1);
+	
+//Look for Safari
+	this.safari = (this.ua.indexOf('Safari') > 1);
+	if (this.safari){
+		this.gecko = false;
+	}
+	
+//Look for IE
+	this.ie = (this.ua.indexOf('MSIE') > 0);
+	if (this.ie){
+		this.ieVer = parseFloat(this.ua.substring(this.ua.indexOf('MSIE')+5, this.ua.length));
+		if (this.ieVer < 5.5){this.min = false;}
+	}
+	
+//Look for Opera
+	this.opera = (this.ua.indexOf('Opera') > 0);
+	if (this.opera){
+		this.operaVer = parseFloat(this.ua.substring(this.ua.indexOf('Opera')+6, this.ua.length));
+		if (this.operaVer < 7.04){this.min = false;}
+	}
+	if (this.min == false){
+//		alert('Your browser may not be able to handle this page.');
+	}
+	
+//Special case for the horrible ie5mac
+	this.ie5mac = (this.ie&&this.mac&&(this.ieVer<6));
+}
+
+var C = new Client();
+
+//for (prop in C){
+//	alert(prop + ': ' + C[prop]);
+//}
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+//[strNavBarJS]
+function NavBtnOver(Btn){
+	if (Btn.className != 'NavButtonDown'){Btn.className = 'NavButtonUp';}
+}
+
+function NavBtnOut(Btn){
+	Btn.className = 'NavButton';
+}
+
+function NavBtnDown(Btn){
+	Btn.className = 'NavButtonDown';
+}
+//[/strNavBarJS]
+
+function FuncBtnOver(Btn){
+	if (Btn.className != 'FuncButtonDown'){Btn.className = 'FuncButtonUp';}
+}
+
+function FuncBtnOut(Btn){
+	Btn.className = 'FuncButton';
+}
+
+function FuncBtnDown(Btn){
+	Btn.className = 'FuncButtonDown';
+}
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+				//get Mac FireFox to manipulate display, to force screen redraw
+				if (C.mac && C.gecko) {Els[i].style.display = '';}
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+				if (C.mac && C.gecko) {Els[i].style.display = 'none';}
+			}
+		} 
+		else {
+			// tagName is either input or select (that is, Form Elements)
+			// ie6 has a problem with Form elements, so manipulate those
+			if (C.ie) {
+				if (C.ieVer < 7) {
+					if (Show == true){
+						Els[i].style.visibility = 'visible';
+					}
+					else{
+						Els[i].style.visibility = 'hidden';
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+	if (Finished == true){
+		Finish();
+	}
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].clientWidth;
+	this.H = document.getElementsByTagName('body')[0].clientHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	if (C.ie) {
+		thisKey = window.event.keyCode;
+	}
+	else {
+		thisKey = e.keyCode;
+	}
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+	}
+
+	if (Suppress == true){
+		if (C.ie){
+			window.event.returnValue = false;	
+			window.event.cancelBubble = true;
+		}
+		else{
+			e.preventDefault();
+		}
+	}
+}
+
+if (C.ie){
+	document.attachEvent('onkeydown',SuppressBackspace);
+	window.attachEvent('onkeydown',SuppressBackspace);
+}
+else{
+	if (window.addEventListener){
+		window.addEventListener('keypress',SuppressBackspace,false);
+	}
+}
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+}
+
+
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+//EXTENSION TO ARRAY OBJECT
+function Array_IndexOf(Input){
+	var Result = -1;
+	for (var i=0; i<this.length; i++){
+		if (this[i] == Input){
+			Result = i;
+		}
+	}
+	return Result;
+}
+Array.prototype.indexOf = Array_IndexOf;
+
+//IE HAS RENDERING BUG WITH BOTTOM NAVBAR
+function RemoveBottomNavBarForIE(){
+	if ((C.ie)&&(document.getElementById('Reading') != null)){
+		if (document.getElementById('BottomNavBar') != null){
+			document.getElementById('TheBody').removeChild(document.getElementById('BottomNavBar'));
+		}
+	}
+}
+
+
+
+
+//HOTPOTNET-RELATED CODE
+
+var HPNStartTime = (new Date()).getTime();
+var SubmissionTimeout = 30000;
+var Detail = ''; //Global that is used to submit tracking data
+
+function Finish(){
+//If there's a form, fill it out and submit it
+	if (document.store != null){
+		Frm = document.store;
+		Frm.starttime.value = HPNStartTime;
+		Frm.endtime.value = (new Date()).getTime();
+		Frm.mark.value = Score;
+		Frm.detail.value = Detail;
+		Frm.submit();
+	}
+}
+
+
+// v 6.3.0.4
+//complété par Agnes Simonet pour HighlightIfWrong
+
+// aangepast door Annick: kleuren
+
+
+function Card(ID, OverlapTolerance){
+	this.elm=document.getElementById(ID);
+	this.name=ID;
+	this.css=this.elm.style;
+	this.elm.style.left = 0 +'px';
+	this.elm.style.top = 0 +'px';
+	this.HomeL = 0;
+	this.HomeT = 0;
+	this.tag=-1;
+	this.index=-1;
+	this.OverlapTolerance = OverlapTolerance;
+}
+
+function CardGetL(){return parseInt(this.css.left)}
+Card.prototype.GetL=CardGetL;
+
+function CardGetT(){return parseInt(this.css.top)}
+Card.prototype.GetT=CardGetT;
+
+function CardGetW(){return parseInt(this.elm.offsetWidth)}
+Card.prototype.GetW=CardGetW;
+
+function CardGetH(){return parseInt(this.elm.offsetHeight)}
+Card.prototype.GetH=CardGetH;
+
+function CardGetB(){return this.GetT()+this.GetH()}
+Card.prototype.GetB=CardGetB;
+
+function CardGetR(){return this.GetL()+this.GetW()}
+Card.prototype.GetR=CardGetR;
+
+function CardSetL(NewL){this.css.left = NewL+'px'}
+Card.prototype.SetL=CardSetL;
+
+function CardSetT(NewT){this.css.top = NewT+'px'}
+Card.prototype.SetT=CardSetT;
+
+function CardSetW(NewW){this.css.width = NewW+'px'}
+Card.prototype.SetW=CardSetW;
+
+function CardSetH(NewH){this.css.height = NewH+'px'}
+Card.prototype.SetH=CardSetH;
+
+function CardInside(X,Y){
+	var Result=false;
+	if(X>=this.GetL()){if(X<=this.GetR()){if(Y>=this.GetT()){if(Y<=this.GetB()){Result=true;}}}}
+	return Result;
+}
+Card.prototype.Inside=CardInside;
+
+function CardSwapColours(){
+	var c=this.css.backgroundColor;
+	this.css.backgroundColor=this.css.color;
+	this.css.color=c;
+}
+Card.prototype.SwapColours=CardSwapColours;
+
+function CardHighlight(){
+	this.css.backgroundColor='#F2F2F2'; 
+	this.css.color='#3757f7';
+}
+Card.prototype.Highlight=CardHighlight;
+
+function CardUnhighlight(){
+	this.css.backgroundColor='##F2F2F2';
+	this.css.color='#666';
+}
+Card.prototype.Unhighlight=CardUnhighlight;
+
+// ajout par AS
+
+function CardHighlightIfWrong(){
+	this.css.backgroundColor='#F66';
+	this.css.color='#666';
+}
+Card.prototype.HighlightIfWrong=CardHighlightIfWrong;
+
+// fin de l'ajout
+
+function CardOverlap(OtherCard){
+	var smR=(this.GetR()<(OtherCard.GetR()+this.OverlapTolerance))? this.GetR(): (OtherCard.GetR()+this.OverlapTolerance);
+	var lgL=(this.GetL()>OtherCard.GetL())? this.GetL(): OtherCard.GetL();
+	var HDim=smR-lgL;
+	if (HDim<1){return 0;}
+	var smB=(this.GetB()<OtherCard.GetB())? this.GetB(): OtherCard.GetB();
+	var lgT=(this.GetT()>OtherCard.GetT())? this.GetT(): OtherCard.GetT();
+	var VDim=smB-lgT;
+	if (VDim<1){return 0;}
+	return (HDim*VDim);	
+}
+Card.prototype.Overlap=CardOverlap;
+
+function CardDockToR(OtherCard){
+	this.SetL(OtherCard.GetR() + 5);
+	this.SetT(OtherCard.GetT());
+}
+Card.prototype.DockToR=CardDockToR;
+
+function CardSetHome(){
+	this.HomeL=this.GetL();
+	this.HomeT=this.GetT();
+}
+Card.prototype.SetHome=CardSetHome;
+
+function CardGoHome(){
+	this.SetL(this.HomeL);
+	this.SetT(this.HomeT);
+}
+Card.prototype.GoHome=CardGoHome;
+
+//Fix for 6.2.5.2: avoid image dragging problem in draggable cards
+function CardSetHTML(HTML){
+	this.elm.innerHTML = HTML;
+	var DragImgs = this.elm.getElementsByTagName('img');
+	if (DragImgs.length > 0){
+		for (var i=0; i<DragImgs.length; i++){
+			DragImgs[i]. onmousedown = function(){return false;}
+		}
+	}
+}
+Card.prototype.SetHTML = CardSetHTML;
+
+// ***************************************************************
+
+function doDrag(e) {
+	if (CurrDrag == -1) {return};
+	if (C.ie){var Ev = window.event}else{var Ev = e}
+	var difX = Ev.clientX-window.lastX; 
+	var difY = Ev.clientY-window.lastY; 
+	var newX = DC[CurrDrag].GetL()+difX; 
+	var newY = DC[CurrDrag].GetT()+difY; 
+	DC[CurrDrag].SetL(newX); 
+	DC[CurrDrag].SetT(newY);
+	window.lastX = Ev.clientX; 
+	window.lastY = Ev.clientY; 
+	return false;
+} 
+
+function beginDrag(e, DragNum) { 
+	CurrDrag = DragNum;
+	if (C.ie){
+		var Ev = window.event;
+		document.onmousemove=doDrag;
+		document.onmouseup=endDrag;
+	}
+	else{
+		var Ev = e;
+		window.onmousemove=doDrag; 
+		window.onmouseup=endDrag;
+	} 
+	DC[CurrDrag].Highlight();
+	topZ++;
+	DC[CurrDrag].css.zIndex = topZ;
+	window.lastX=Ev.clientX; 
+	window.lastY=Ev.clientY;
+	return false;  
+} 
+
+function endDrag(e) { 
+	if (CurrDrag == -1) {return};
+	DC[CurrDrag].Unhighlight();
+	if (C.ie){document.onmousemove=null}else{window.onmousemove=null;}
+	onEndDrag();	
+	CurrDrag = -1;
+//Need a bugfix for Opera focus problem here
+	if (C.opera){FocusAButton();}
+	return true;
+} 
+
+var CurrDrag = -1;
+var topZ = 100;
+
+
+
+
+// Hot Potatoes v6.3.0.4 
+//***************************************************************
+// modifié par Agnès Simonet
+// avec l'aide et le soutien de Stan Bogdanov
+// function Centrer_ligne : auteur Michael Rottmeier
+// pour un JMatch_Sort v.1.4.2 (exercice de catégorisation)
+
+// aangepast door Annick: pg.W vervangen door 800
+
+//***************************************************************
+
+// données issues de l'interface :
+// F[x][y] : catégories
+// D[X][Y] : items
+// seront modifiées par regroupement des doublons, limitation du nombre de cartes et shuffle
+
+// cartes (géometrie et contenu) :
+// FC : cartes-titres des boites de catégorie (headings in the category boxes)
+// RC : cartes-boites de catégorie
+// DC : cartes à déplacer (draggable cards)
+
+// listes : 
+// liste_FC : tableau des FC[i]
+// liste_DC : tableau des DC[i]
+// liste_RC : tableau des n° des DC droppés ou fixés dans un RC
+
+//***************************************************************
+
+
+//JMATCH-SPECIFIC SCORM-RELATED JAVASCRIPT CODE
+
+function SetScormScore(){
+//Reports the current score and any other information back to the LMS
+	if (API != null){
+		API.LMSSetValue('cmi.core.score.raw', Score);
+		
+		
+//Now send a detailed reports on the item
+		var ItemLabel = 'Matching';
+		API.LMSSetValue('cmi.objectives.0.id', 'obj'+ItemLabel);
+		API.LMSSetValue('cmi.interactions.0.id', 'int'+ItemLabel);	
+		API.LMSSetValue('cmi.objectives.0.status', API.LMSGetValue('cmi.core.lesson_status'));	
+		API.LMSSetValue('cmi.objectives.0.score.min', '0');
+		API.LMSSetValue('cmi.objectives.0.score.max', '100');
+		API.LMSSetValue('cmi.objectives.0.score.raw', Score);
+//We can only use the performance type, because we're storing multiple responses of various types.
+		API.LMSSetValue('cmi.interactions.0.type', 'performance');
+		API.LMSSetValue('cmi.interactions.0.student_response', AnswersTried);
+		
+		API.LMSCommit('');
+	}
+}
+
+
+//JMATCH-SPECIFIC CORE JAVASCRIPT CODE
+//***************************************************************
+// variables dont on peut modifier les valeurs
+// you can change those variable values
+//***************************************************************
+
+
+// Hauteur des boites de catégorie
+// Height of the category boxes
+// définie dans 150
+// set in 150
+var hauteurUserDefined1 = '150';
+// si 150 est vide - if 150 is void : 
+// calcul automatique (taille suffisante pour tous les items correctement placés)
+// (translation)
+var autoHeight = 1; // comment for no auto height
+// taille maximale pour accueillir tous les items
+// (translation)
+// var autoHeight = 0; //uncomment for no auto height
+
+ 
+// Largeur des boites de catégorie
+// Width of the category boxes
+// définie dans 250
+// set in 250
+var largeurUserDefined2 = '250';
+// si 250 est vide - if 250 is void : 
+// Largeurs identiques 
+// Same widths
+var equiWidthFC = 1; //comment for minimal widths
+// Largeur minimale pour chaque boite
+// Minimal widths
+// var equiWidthFC = 0; //uncomment for minimal widths
+
+// Auto Highlight
+// erreur indiquée dès que la carte est posée - 1 : oui - 0 : non
+//1 (true) practice mode for auto highlight - 0 (false) test mode for no auto highlight
+// définie dans 1
+// set in 1
+ var autoHighlight = '1';
+ 
+
+// entre le bord gauche d'une boite de catégorie et les items placés
+// (translation)
+var spacerH = 5;
+// entre cartes mobiles placées
+// between dropped items
+var spacerV_CDinRC = 5;
+// entre le div des boutons et le titre des categories
+// (translation)
+var spacer_FC_ButtonDiv = 10;
+// entre les lignes des cartes mobiles à placer
+// between the lines of draggable items
+var spacerV_DC_DC = 10; 
+// ecart entre la base des boites de categorie et le sommet des items à placer
+// height between the bottom of the category boxes and the top of the draggable items
+var DragHeight = 30;
+// petit supplément de place lorsque la hauteur des boites est calculée automatiquement
+// some more pixels when auto height of category boxes
+var rab_RC = 0;
+//***************************************************************
+
+// fin
+//***************************************************************
+
+// variables qui seront modifiées par la suite
+
+var LeftColPos = 100;
+var RightColPos = 500;
+var DragTop = 120;
+var Finished = false;
+var AnswersTried = '';
+//***************************************************************
+var NbFix = 0; //nombre de cartes pré-positionnées
+var CorrectResponse = 'Correct! prima.';
+var IncorrectResponse = 'Niet correct! Probeer opnieuw.';
+var YourScoreIs = 'Je score is ';
+var DivWidth = 600; //default value
+var FeedbackWidth = 200; //default
+
+// Liens et couleur de fond des items mal placées;
+// Link colour + wrong items
+var bgColorIfWrong = '#F66';
+var colorIfWrong= '#666';
+
+var ExBGColor = '#FFF';
+var PageBGColor = '#FFF';
+var TextColor = '#666';
+var TitleColor = '#09F';
+var Penalties = 0;
+//var NbFix = 0; //nombre de cartes pré-positionnées
+var Score = 0;
+var TimeOver = false;
+var Locked = false;
+var ShuffleQs = true;
+var QsToShow = 7;
+
+//***************************************************************
+
+
+
+//Fixed and draggable card arrays
+FC = new Array();
+DC = new Array();
+// ajouté par AS : carte réceptrice (box)
+RC = new Array();
+//pour le centrage des lignes
+Liste_FC = new Array();
+Liste_DC = new Array();
+// pour le réarrangement vertical dans les cartes réceptrices
+Liste_RC = new Array();
+
+
+
+
+function onEndDrag(){ 
+// modifié par AS
+
+//La carte est-elle lâchée sur une carte réceptrice ?
+	var Docked = false; 
+	var DropTarget = DroppedOnFixed(CurrDrag);
+	//  donnera le n° de la carte d'origine sur laquelle elle était placée ou 0 sinon
+	var prevtag=DC[CurrDrag].tag;
+	
+	if (DropTarget > -1) // si oui
+	{	
+		//la mettre dans la bonne liste
+		Liste_RC[DropTarget].push(CurrDrag);
+
+		//placer la carte	
+		DC[CurrDrag].tag = DropTarget+1; // n°(=idx +1)de la carte sur laquelle DC est lâchée
+		Positionner_DC_docked(DC[CurrDrag].tag);
+		D[CurrDrag][2] = F[DropTarget][1];
+		Docked = true;
+		
+		//colorer la carte si elle est mal placée (si autolight)
+		if (autoHighlight == 1 ) {
+			if (D[CurrDrag][2] != D[CurrDrag][1]) {
+				DC[CurrDrag].HighlightIfWrong();
+			}
+		}
+		
+		//était-elle déjà  placée ?
+		if (prevtag>0) 
+		{	
+			//supprimer de la liste d'origine
+			Liste_RC[prevtag-1].splice(Liste_RC[prevtag-1].indexOf(CurrDrag),1);
+			//réorganiser le contenu du RC d'où vient la carte
+			Positionner_DC_docked(prevtag);
+		}
+	}
+
+	if (Docked == false) // si non
+	{
+		DC[CurrDrag].GoHome(); // remettre à sa place d'origine
+		DC[CurrDrag].tag = 0; // lâchée hors RC
+		D[CurrDrag][2] = 0; // non associée à un FC
+		//supprimer de la liste d'origine
+		Liste_RC[prevtag-1].splice(Liste_RC[prevtag-1].indexOf(CurrDrag),1);
+	}	
+}
+ 
+// dans quelle box RC la carte mobile est-elle placée ?
+// retour : index de la box ou -1 si hors carte fixe
+function DroppedOnFixed(DNum){
+	var Result = -1;
+	var OverlapArea = 0;
+	var Temp = 0;
+	for (var i=0; i<RC.length; i++){
+		Temp = DC[DNum].Overlap(RC[i]);
+		if (Temp > OverlapArea){
+			OverlapArea = Temp;
+			Result = i;
+		}
+	}
+	return Result;
+}
+
+//placement et réorganisation des cartes placées
+function Positionner_DC_docked(RCNum)
+{
+	var newtop = RC[RCNum-1].GetT() + spacerV_CDinRC ;
+
+	//for(var i=0;i<D.length;i++) 
+	for(var i=0;i<Liste_RC[RCNum-1].length;i++) 
+		{	
+			var idx_carte=Liste_RC[RCNum-1][i];
+			DC[idx_carte].SetL( RC[RCNum-1].GetL() +spacerH);
+			// positionnement vertical
+			DC[idx_carte].SetT( newtop);
+			newtop = newtop + DC[idx_carte].GetH()+spacerV_CDinRC ;
+		}
+}
+
+// ************************** STARTUP **********************
+function StartUp(){
+
+
+	ScormStartUp();
+
+
+
+
+
+
+//Calculate page dimensions and positions
+	pg = new PageDim();
+	LeftColPos = Math.floor(800*0.01); // Stan changed value to 0.01 and the containers are now centered.
+	DragTop = parseInt(document.getElementById('CheckButtonDiv').offsetHeight) + parseInt(document.getElementById('CheckButtonDiv').offsetTop) + spacer_FC_ButtonDiv;
+
+	if (C.ie){
+		DragTop += 15;
+	}
+	
+//Reduce array if required
+	if (QsToShow < F.length){
+		ReduceItems2();
+	}
+
+	
+	
+	
+// ajouté par AS : 
+// avant shuffle
+//***************************************************************
+// ************ suppression des doublons de F[x][0] *************
+//***************************************************************
+
+// ajout d'un F[x][2] contenant le nombre de D correspondants (utilisé ?)
+// et adaptation des n° de correspondance de D
+
+
+	var NewF= new Array();
+	var q=0; //index du nouveau tableau
+	NewF [q]= new Array();
+	
+	
+	for(var x=0;x<F.length;x++) // pour chaque élément de F et l'élément de même index de D
+	{	stock=0;
+		//recherche et stockage des doublons 
+		for(var i=0;i<q;i++) // on regarde les contenus déja stockées dans NewF
+		{	if(F[x][0]==NewF[i][0])
+			{ //si on a déjà stocké le contenu
+				stock=1; // inutile de stocker
+				NewF[i][2] = NewF[i][2]+1; //1 exemplaire de plus
+				//modifier D[x][1]
+				D[x][1] = NewF[i][1]; // nouveau n° de celle qui a été stockée précédemment
+				i = q; // on s'arrête à cette 1ere valeur commune
+			} 
+		}
+		
+		if(stock==0) // si jamais stockée
+		{ 	NewF[q][0] = F[x][0]; // on stocke
+			NewF[q][1] = q+1; //nouveau n°
+			NewF[q][2] = 1; //1 exemplaire
+			//modifier D[x][1]
+			D[x][1] = NewF[q][1];
+			
+			q=q+1 // à la fin on aura un élément de trop
+			NewF[q]= new Array();
+		}
+	}
+
+	//supprimer le dernier NewF[q]
+	NewF.pop() ;
+
+	// reconstruire F
+	F=NewF ;
+
+	//dimensionner Liste_RC
+	for (var j=0; j<F.length; j++){	Liste_RC[j] = new Array();}
+	
+// fin de l'ajout
+
+//***************************************************************
+// ************************** Shuffle ***************************
+//***************************************************************
+
+//Shuffle the items (D) if required
+	if (ShuffleQs == true){
+		D = Shuffle(D);
+	}
+
+//Shuffle the categories (F)
+	//F = Shuffle(F);
+
+
+//***************************************************************
+// ************* Les cartes : définition et données *************
+//***************************************************************
+	var TempInt = 0;
+	var DropHome = 0;
+	var WidestFC = 0; // la + large des cartes FC
+	var HighestFC = 0; // la + haute des cartes FC 
+	var CardContent = '';
+	
+// ************ Cartes fixes : définition et contenu ************
+	// détermination de la plus grande hauteur
+	for (var i=0; i<F.length; i++)
+	{
+		FC[i] = new Card('F' + i, 10);
+		CardContent = F[i][0];
+		FC[i].elm.innerHTML = CardContent
+		if (FC[i].GetH() > HighestFC)
+		{
+			HighestFC = FC[i].GetH();// la plus grande hauteur
+		}
+		if (FC[i].GetW() > WidestFC)
+		{
+			WidestFC = FC[i].GetW();// la plus grande largeur
+		}
+	}	
+
+// ****** Cartes réceptrices RC (recevront les DC placées) ******
+
+	// tableau R pour carte réceptrice 
+	// autant d'élément que F
+	R = new Array();
+	for (var i=0; i<F.length; i++){	R[i] = 0;}		
+
+	// Cartes réceptrices : définition et remplissage 
+
+	for (var i=0; i<F.length; i++)
+	{	
+	RC[i] = new Card('R' + i, 10);
+	CardContent = '';
+	RC[i].elm.innerHTML = CardContent;
+	}
+	
+// ********************* Cartes mobiles DC ***********************
+	var WidestDC = 0; // sera la + large des cartes DC
+	var HighestDC = 0; // sera la + haute des cartes DC
+	var hauteur_totale_DC = 0;	
+	
+	for (i=0; i<D.length; i++){
+		// définition et contenu
+		DC[i] = new Card('D' + i, 10);
+		CardContent = D[i][0];
+		//Fix for 6.2.5.2 problem with dragging images.
+		DC[i].SetHTML(CardContent);
+		DC[i].css.cursor = 'move';
+		DC[i].css.backgroundColor = '#F2F2F2'; //à modifier achtergrond bij start
+		DC[i].css.color = '#666'; //à modifier
+		
+		// détermination de la largeur du DC le plus large
+		
+		if (DC[i].GetW() > WidestDC){WidestDC = DC[i].GetW();}
+		
+		// détermination de hauteur du DC le plus haut
+		
+		if (DC[i].GetH() > HighestDC){HighestDC = DC[i].GetH();	}
+		
+		// et de la hauteur de tous les DC
+			hauteur_totale_DC = hauteur_totale_DC + DC[i].GetH() + spacerV_CDinRC;	
+
+	}
+		hauteur_totale_DC = hauteur_totale_DC - spacerV_CDinRC;// pas besoin d'un spacerV_CDinRC pour le dernier
+		
+	
+	// calcul de la hauteur totale des DC corrects pour chaque boite RC	
+	var hauteur_total_DC_corrects =0;
+
+	for (var i=0; i<F.length; i++){
+		var hauteur_total_DC_corrects_in_RC =0;
+		for (var j=0; j<D.length; j++){
+			if (D[j][1] == F[i][1]) {
+				hauteur_total_DC_corrects_in_RC = hauteur_total_DC_corrects_in_RC + DC[j].GetH() + spacerV_CDinRC;
+			}
+		if (hauteur_total_DC_corrects_in_RC > hauteur_total_DC_corrects) {hauteur_total_DC_corrects = hauteur_total_DC_corrects_in_RC - spacerV_CDinRC}; 
+		}
+	}
+	
+	
+//***************************************************************
+// **************** Les cartes : positionnement *****************
+//***************************************************************	
+	
+//***************** positionnement des cartes FC ****************
+
+	var CurrColPos = LeftColPos;
+	var CurrTop = DragTop;
+	
+	//largeur
+	var WidestDCFC = 0;
+	// qu'est-ce qui est le plus large : les DC ou les FC ?
+	WidestDCFC = Math.max(WidestDC, WidestFC); 
+
+//alert('WidestFC : '+WidestFC);
+//alert('WidestDC : '+WidestDC);
+//alert('WidestDCFC : '+WidestDCFC);
+	
+	for (var i=0; i<F.length; i++)
+	
+	{	// hauteur
+		// valeur (en pixel)définie dans strUserDefined2
+		// sinon largeur minimale : la plus large des DC ou la plus large des FC + 2*spacerH
+		//-12 seems to be required -- no idea why!
+		if (isNaN(largeurUserDefined2)||(largeurUserDefined2=='')) { // rien de défini dans strUserDefined2
+			if (equiWidthFC ==1) {FC[i].SetW(WidestDCFC-12 + 2*spacerH);} // même largeurs
+			else {
+				if (FC[i].GetW() < WidestDC) {
+					FC[i].SetW(WidestDC-12 + 2*spacerH); // largeur minimale : WidestDC+2*spacerH
+				}
+			}
+		}
+		else {FC[i].SetW(largeurUserDefined2-12 + 2*spacerH);}  // définie dans strUserDefined2
+		
+		//mise en place sans centrage
+		FC[i].SetT(CurrTop);
+		FC[i].SetL(CurrColPos);
+		FC[i].SetH(HighestFC-12);
+		FC[i].SetHome();
+		//pour carte suivante
+		CurrColPos = CurrColPos + FC[i].GetW() +spacerH ;
+		//pour le centrage
+		Liste_FC.push(FC[i]);
+		
+	}
+	
+		//centrage des cartes FC
+		Centrer_ligne(Liste_FC,0);
+
+
+//***************** positionnement des cartes RC ****************
+	
+	var CurrColPos = LeftColPos;
+	
+	for (var i=0; i<R.length; i++)
+	{
+		//Fix for 6.2: the reduction by 12 seems to be required -- no idea why!
+		
+		RC[i].SetW(FC[i].GetW()-12);
+		RC[i].SetT(FC[i].GetT() +FC[i].GetH() + 0);
+		RC[i].SetL(FC[i].GetL());
+		RC[i].SetHome();
+		
+		// hauteur
+		// valeur (en pixel)définie dans strUserDefined1
+		// sinon hauteur permettant d'accueillir tous les DC si autoHeight = 0
+		// sinon hauteur permettant d'accueillir les DC corrects si autoHeight = 1
+		var hauteur_max_RC = 50;
+		var hauteur_RC= 50;
+		hauteur_max_RC = (FC[i].GetH()-12) + hauteur_totale_DC + 0; 
+		if (isNaN(hauteurUserDefined1)||(hauteurUserDefined1=='')) { // rien de défini dans strUserDefined1
+		
+			if (autoHeight == 1) {hauteur_RC = hauteur_total_DC_corrects + rab_RC;} // RC peut contenir le nombre max de DC corrects + une petite marge
+			else {hauteur_RC = hauteur_max_RC;} // RC peut contenir tous les items DC
+		}
+		else {hauteur_RC = parseInt(hauteurUserDefined1,10) ;} // une hauteur définie dans strUserDefined1
+		
+		RC[i].SetH(hauteur_RC);
+		RC[i].SetHome();
+
+	}
+//**** positionnement des cartes DC (plusieurs lignes possibles)****
+	
+	CurrColPos = LeftColPos;
+	// sous les FC+RC
+	var Highest =0;
+	Highest = HighestFC + hauteur_RC + 0;
+	var DragHeightFCDC = DragHeight + Highest
+	
+	if (DragHeightFCDC<Highest ){ DragHeightFCDC = Highest;} //espacement minimal : DragHeightFCDC
+	CurrTop = CurrTop + DragHeightFCDC + 12;
+	for (var i=0; i<D.length; i++)
+	{
+		// est-ce que la carte tiendra sur la ligne ?
+		// sinon aller à la ligne
+		if ( (CurrColPos+ DC[i].GetW() )>=(800*0.98) )
+		{	CurrColPos = LeftColPos;
+			CurrTop = CurrTop +  HighestDC + spacerV_DC_DC;	
+		}
+		// mise en place
+		DC[i].SetT(CurrTop);
+		DC[i].SetL(CurrColPos);
+		//DC[i].SetH(HighestDC-12);//
+		DC[i].SetHome();
+		// pour carte suivante
+		CurrColPos = CurrColPos + DC[i].GetW() + spacerH; // position gauche de la carte DC suivante
+		
+		//pour le centrage
+		Liste_DC.push(DC[i]);
+	}
+/*
+*/
+	//centrage des cartes DC
+		Centrer_ligne(Liste_DC,0);	
+
+		
+// fonction de centrage		
+// d'après Michael Rottmeier	
+function Centrer_ligne(CardList,idx_debut_ligne)
+{
+	//var divWidth = pg.W*0.890 ;
+	var divWidth = 800 ;
+	var indentation = 0 ;
+	var largeur_ligne = 0 ;
+	var idx_carte = idx_debut_ligne;
+	var top_courant = CardList[idx_carte].GetT();	
+	//index de la dernière carte de la ligne
+	while( (idx_carte < CardList.length) && (CardList[idx_carte].GetT() == top_courant) )
+	{	
+		idx_carte++;
+	}
+	//calcul du décalage gauche
+	largeur_ligne = CardList[idx_carte -1].GetR() - CardList[idx_debut_ligne].GetL()  ;
+	indentation = Math.floor( (800 - largeur_ligne)/2 );
+	// positionnement centré de la ligne
+	for (i=idx_debut_ligne; i<idx_carte; i++)
+	{
+		CardList[i].SetL( CardList[i].GetL() + indentation );
+		CardList[i].SetHome();
+	}
+	// ligne suivante
+	if (idx_carte < CardList.length)
+	{
+	Centrer_ligne(CardList,idx_carte);	
+	}
+	
+}
+
+
+//***************************************************************
+// Si on a coché les cases Fix dans l'interface de Jmatch
+//***************************************************************
+
+
+
+
+
+
+
+}
+// ************************** fin de STARTUP **********************
+
+
+
+
+
+
+// *******************************************
+
+
+// *******************************************
+
+F = new Array();
+F[0] = new Array();
+F[0][0]='vis';
+F[0][1] = 1;
+F[1] = new Array();
+F[1][0]='zoogdier';
+F[1][1] = 2;
+F[2] = new Array();
+F[2][0]='zoogdier';
+F[2][1] = 3;
+F[3] = new Array();
+F[3][0]='vis';
+F[3][1] = 4;
+F[4] = new Array();
+F[4][0]='vogel';
+F[4][1] = 5;
+F[5] = new Array();
+F[5][0]='zoogdier';
+F[5][1] = 6;
+F[6] = new Array();
+F[6][0]='vogel';
+F[6][1] = 7;
+
+
+D = new Array();
+D[0] = new Array();
+D[0][0]='haai';
+D[0][1] = 1;
+D[0][2] = 0;
+D[1] = new Array();
+D[1][0]='dolfijn';
+D[1][1] = 2;
+D[1][2] = 0;
+D[2] = new Array();
+D[2][0]='mens';
+D[2][1] = 3;
+D[2][2] = 0;
+D[3] = new Array();
+D[3][0]='tonijn';
+D[3][1] = 4;
+D[3][2] = 0;
+D[4] = new Array();
+D[4][0]='arend';
+D[4][1] = 5;
+D[4][2] = 0;
+D[5] = new Array();
+D[5][0]='aap';
+D[5][1] = 6;
+D[5][2] = 0;
+D[6] = new Array();
+D[6][0]='pingu&#x00EF;n';
+D[6][1] = 7;
+D[6][2] = 0;
+
+
+function ReduceItems2(){
+	var ItemToDump=0;
+	var j=0;
+	while (F.length > QsToShow){
+		ItemToDump = Math.floor(F.length*Math.random());
+		for (j=ItemToDump; j<(F.length-1); j++){
+			F[j] = F[j+1];
+		}
+		for (j=ItemToDump; j<(D.length-1); j++){
+			D[j] = D[j+1];
+		}		
+		F.length = F.length-1;
+		D.length = D.length-1;
+	}
+
+}
+
+function TimerStartUp(){
+	setTimeout('StartUp()', 300);
+}
+
+function CheckAnswers(){
+	if (Locked == true){return;}
+
+//Set the default score and response
+	var TotalCorrect = 0; //nombre de cartes bien placées
+	Score = 0;
+	var Feedback = '';
+
+//for each fixed, check to see if the tag value for the draggable is the same as the fixed
+	if (AnswersTried.length > 0){AnswersTried += ' | ';}
+	var i, j;
+	for (i=0; i<D.length; i++){
+		if (i>0){AnswersTried += ',';}
+		AnswersTried += D[i][1] + '.' + D[i][2] + '';
+		if ((D[i][2] == D[i][1])&&(D[i][2] > 0)){
+			TotalCorrect++;
+
+		}
+
+		else{
+//Change made for version 6.0.3.41: don't send wrong items home, 
+//show them in a more conspicuous way.
+				DC[i].SetL(DC[i].GetL());// ???
+				DC[i].HighlightIfWrong();
+		}
+	}
+
+// modifié par AS
+	// ne tient pas compte des cartes pré-fixées
+	// Penalties/2 pour que le score s'améliore lorsqu'on corrige une erreur
+	
+	
+	if (D.length == NbFix){ // cas où toutes les cartes sont fixées
+		Score = 0 ;
+		CorrectResponse = '';
+	}// cas où toutes les cartes sont fixées
+	else {Score = Math.floor( (100*(TotalCorrect-NbFix-Penalties/2)) / (D.length-NbFix) );}
+
+	var AllDone = false;
+
+	//if (TotalCorrect == F.length) {
+	if (TotalCorrect == D.length) {
+		AllDone = true;
+	}
+//fin de modif
+	if (AllDone == true){
+		Feedback = YourScoreIs + ' ' + Score + '%.';
+		ShowMessage(Feedback + '<br />' + CorrectResponse);
+	}
+	else {
+		Feedback = YourScoreIs + ' ' + Score + '%.' + '<br />' + IncorrectResponse;
+		ShowMessage(Feedback);
+		Penalties++; // Penalty for inaccurate check
+	}
+//If the exercise is over, deal with that
+	if ((AllDone == true)||(TimeOver == true)){
+
+
+		TimeOver = true;
+		Locked = true;
+		Finished = true;
+		setTimeout('Finish()', SubmissionTimeout);
+	}
+
+	if (AllDone == true){
+		SetScormComplete();
+	}
+	else{
+		SetScormIncomplete();
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+</head> 
+
+<body onload="TimerStartUp()" id="TheBody" onunload="CheckLMSFinish()"> 
+<!-- BeginTopNavButtons -->
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle">Dierenrijk</h2>
+
+	<h3 class="ExerciseSubtitle">! LET OP: deze oefening werkt niet op sommige tablets (zoals ipads)</h3>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions">Sleep de dieren naar de juiste groep.</div>
+</div>
+<div id="CheckButtonDiv">
+<button id="CheckButton1" class="FuncButton" onmouseover="FuncBtnOver(this)" onfocus="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onblur="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" onclick="CheckAnswers()">&nbsp;Antwoord controleren&nbsp;</button>
+<button class="FuncButton" onMouseOver="FuncBtnOver(this)" onFocus="FuncBtnOver(this)" onMouseOut="FuncBtnOut(this)" onBlur="FuncBtnOut(this)" onMouseDown="FuncBtnDown(this)" onMouseUp="FuncBtnOut(this)" onClick="javascript:window.print()">&nbsp; Afdrukken &nbsp;</button>
+	</div>
+
+
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+<!--
+
+
+for (var i=0; i<F.length; i++){
+	document.write('<div id="F' + i + '" class="CardStyleFC"></div>');
+}
+
+for (var i=0; i<F.length; i++){
+	document.write('<div id="R' + i + '" class="CardStyleRC"></div>');
+}
+for (var i=0; i<D.length; i++){
+	document.write('<div id="D' + i + '" class="CardStyleDC" onmousedown="beginDrag(event, ' + i + ')"></div>');
+}
+
+//-->
+
+//]]>
+</script>
+
+<div class="Feedbackmatch" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" onclick="HideFeedback(); return false;">&nbsp;OK&nbsp;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+</html>

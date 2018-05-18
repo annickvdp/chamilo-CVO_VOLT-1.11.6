@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Annick Vdp."></meta><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"></meta>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC:Creator" content="Annick Vdp" />
+<meta name="DC:Title" content="Vraagwoorden" />
+
+<meta charset="utf-8" />
+
+<title>
+Vraagwoorden
+</title>
+
+<!-- Made with executable version 6.3 Release 0 Build 5 -->
+
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+
+
+<style type="text/css">
+
+
+/* This is a modified CSS3 stylesheet for rounded corners of buttons,
+the layout boxes and the input boxes in the exercise,
+as well as dropshadows on buttons and draggable cards in JMix drag and drop */
+
+   /* Modified by Stan Bogdanov - stanbogdanov@yahoo.com */
+  /*  hp6.cs_            */ 
+ /*  v1.5.2             */
+/*  24 January 2013    */  
+
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 6.3 Release 0 Build 5 */
+/* Aanpassingen Annick:
+	div.feedback: remove absolute positioning, add text-align left, padding 6px, change border-color, clear both
+	remove shadows-shades
+	change text-align left div.title, div.stdDiv
+	change font-size ExerciseTitle
+	div.stdDiv image margin and overflow 
+	changes made to left and right container
+	cardstyle z-index -1
+	navbarstyle: no shade, colors
+	COLORS ZWARTER 
+		change strTitleColor to #09F to #3757f7
+		change color ExerciseSubtitle to #333333
+		background white body, stdDiv, feedback
+		change strTextColor #333333, maar border-color #666
+		change colors buttons
+	WIDTH
+		change width to 800px for div.feedback, div.titles, div.StdDiv, body
+	TABLE
+	    change table formatting jmatch (standard): left and rightitem: change padding
+
+*/
+
+/* Hack to hide a nested Quicktime player from IE, which can't handle it. */
+* html object.MediaPlayerNotForIE {
+	display: none;
+}
+
+body{
+	font-family: Geneva,Arial;
+	background-color: #FFF;
+	color: #333333 ;
+ 
+	margin-right: 1%;
+	margin-left: 1%;
+	font-size: small;
+	width: 800px;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 100%;
+}
+
+table,div,span,td{
+	font-size: 100%;
+	color: #333333;
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: left;
+	color: #3757f7;
+	width: 800px;
+}
+
+button{
+	font-family: Geneva,Arial;
+	font-size: 100%;
+	display: inline;
+/* Stan_Rounded buttons */
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 4px 17px;
+	margin:2px;
+/* Stan_Rounded buttons  END*/
+}
+
+button:link,
+button:visited,
+button:hover,
+button:focus,
+button:active {
+	outline: none;
+}
+
+
+.ExerciseTitle{
+	font-size: 150%;
+	color: #3757f7;
+}
+
+.ExerciseSubtitle{
+	font-size: 100%;
+	color: #333333;
+}
+
+div.StdDiv{
+	background-color: #fff;
+	text-align: left;
+	font-size: 100%;
+	color: #333333;
+	padding: 0.5em;
+	border: 1px solid #ccc;
+	margin-bottom: 1px;
+	width: 800px;
+	overflow: hidden;
+/*Stan Rounded corners of layout boxes */	
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+/*Stan Rounded corners of layout boxes */	
+}
+
+div.StdDiv img{
+	margin-right: 10px;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", Geneva,Arial; 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", Geneva,Arial; 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", Geneva,Arial;
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: #3757f7;
+
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: #3757f7;
+/* Stan  rounded corners of timer */	
+ -khtml-border-radius: 10px;
+ -moz-border-radius: 15px;
+ -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /* Stan  rounded corners of timer end */
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: #3757f7;
+}
+
+.LeftItem{
+	font-size: 100%;
+	color: #333333;
+	text-align: left;
+	padding: 2px 30px 2px 30px;
+	background-color: #E0E0E0;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 100%;
+	color: #333333;
+	padding: 2px 30px 2px 2px;
+}
+
+span.CorrectMark{
+
+}
+
+
+input, textarea{
+	font-family: Verdana,Geneva,Arial,sans-serif;
+	font-size: 100%;
+
+/* Stan_rounded border of input boxes and textarea */
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px;
+	border:1px solid silver;
+/* Stan_rounded border of input boxes and textarea END */
+}
+
+/* Stan_rounded focus border of input boxes and textarea */
+
+input:focus, textarea:focus {
+	outline: none; 
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px;
+	border:1px solid silver;
+/* Stan rounded focus border of input boxes and textarea end 8 December 2012 */	
+
+	}
+	
+select{
+	font-size: 100%;
+	/* Stan - Rounded menu */
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 3px 2px 3px 5px;
+	border: 1px solid silver;
+/* Stan - Rounded menu END */
+}
+
+select:focus {
+outline:none;
+}
+
+div.Feedback, #FeedbackDiv  {
+	background-color: #fff;
+	z-index: 105;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #CCC;
+	padding: 6px;
+	color: #3757f7;
+	display: none;
+	font-size: 100%;
+	text-align: left;
+	width: 800px;
+	clear: both;
+/* Stan_rounded border of feedback box */
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+/* Stan_rounded border of fixed box END */
+}
+
+.Feedbackmatch {
+	position: absolute;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: #333333;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: #333333;
+	border-color: #666;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	width: 90%;
+	position: relative;
+	text-align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: #E0E0E0;
+}
+	
+
+table.FlashcardTable td.Showing{
+	font-size: 140%;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: silver;
+	color: #333333;
+	background-color: #E0E0E0;
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+table.FlashcardTable td {
+	min-width:20px;
+}
+
+/* JMix styles */
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #004080;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: center;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #3757f7;
+	width: 80%;
+}
+
+/* JCloze styles */
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+	background-color: #000000;
+}
+
+table.CrosswordGrid tbody tr td{
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 140%;
+	padding: 1px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid span{
+	color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+	color: #000000;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: 66%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridNum:hover, .GridNum:visited{
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+	display: none; /* initially hidden, shown if needed */
+	margin-bottom: 0.5em;
+}
+
+div.Keypad button{
+	font-family: Geneva,Arial;
+	font-size: 100%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: Geneva,Arial;
+	border: 1px solid #ccc;
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 100%;
+}
+
+.Answer{
+	font-size: 100%;
+	letter-spacing: 0.1em;
+}
+
+.PartialAnswer{
+	font-size: 100%;
+	letter-spacing: 0.1em;
+	color: #3757f7;
+}
+
+.Highlight{
+	color: #000000;
+	background-color: gold;
+	font-weight: bold;
+	font-size: 100%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em 0em 1em 0em;
+	border-color: #ccc;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	text-align: center;
+	border: 1px solid silver;
+	margin-right:2px;
+
+	border-left-color: #CCC;
+	border-top-color: #CCC;
+	border-right-color: #666;
+	border-bottom-color: #666;
+	color: #333333;
+	background-color: #E5E5E5;
+
+
+	padding: 3px 6px 3px 6px;
+	cursor: pointer;
+
+}
+
+.FuncButtonUp {
+	text-align: center;
+	border: 1px solid silver;
+	margin-right:2px;
+
+	border-left-color: #CCC;
+	border-top-color: #CCC;
+	border-right-color: #666;
+	border-bottom-color: #666;
+	background-color: #999;
+	color: #FFF;
+
+
+	padding: 3px 6px 3px 6px;
+	cursor: pointer;
+
+/* Stan Button Shadow */	
+	-moz-box-shadow: -2px -2px 5px #888;
+	-webkit-box-shadow: -2px -2px 5px #888;
+	box-shadow: -2px -2px 5px #888;
+/* Stan Button Shadow end  Dec 4 2012*/
+}
+
+.FuncButtonDown {
+	text-align: center;
+	border:1px solid silver;
+	margin-right:2px;
+
+	border-left-color: #666;
+	border-top-color: #666;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	background-color: #999;
+	color: #FFF;
+
+
+	padding: 3px 6px 3px 6px;
+	cursor: pointer;
+
+/* Stan Button Shadow Dec 4 2012 */	
+	-moz-box-shadow: -2px -2px 5px #888;
+	-webkit-box-shadow: -2px -2px 5px #888;
+	box-shadow: -2px -2px 5px #888;
+/* Stan Button Shadow end */
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	width: 810px;
+	background-color: #E6E6E6;
+	border: 1px solid #999;
+	text-align: center;
+	margin: 20px 0px 0px 0px;
+	clear: both;
+	font-size: 100%;
+
+/* Stan Rounded corner of Nav Bar */	
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+/* Stan Rounded corner of Nav Bar  end */
+padding:1px;
+}
+
+.NavButton {
+	border: 1px solid silver;
+	
+	border-left-color: #CCC;
+	border-top-color: #CCC;
+	border-right-color: #666;
+	border-bottom-color: #666;
+	color: #333333;
+	background-color: #E5E5E5;
+
+
+	cursor: pointer;	
+
+}
+
+.NavButtonUp {
+	border:1px solid silver;
+
+	border-left-color: #CCC;
+	border-top-color: #CCC;
+	border-right-color: #666;
+	border-bottom-color: #666;
+	background-color: #999;
+	color: #FFF;
+
+	cursor: pointer;	
+/* Stan Shadow on buttons Dec 4 2012 */
+	-moz-box-shadow: -2px -2px 5px #888;
+	-webkit-box-shadow: -2px -2px 5px #888;
+	box-shadow: -2px -2px 5px #888;
+/* Stan Shadow on buttons end */
+}
+
+.NavButtonDown {
+	border: 1px solid silver;
+
+	border-left-color: #666;
+	border-top-color: #666;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	background-color: #999;
+	color: #FFF;
+
+	cursor: pointer;
+/* Stan Shadow on buttons Dec 4 2012 */
+	-moz-box-shadow: -2px -2px 5px #888;
+	-webkit-box-shadow: -2px -2px 5px #888;
+	box-shadow: -2px -2px 5px #888;
+/* Stan Shadow on buttons end */	
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: #0080c0;
+}
+
+a:visited{
+	color: #0080c0;
+}
+
+a:hover{
+	color: #0080c0;
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: Geneva,Arial;
+	font-size: 100%;
+	padding: 5px;
+	border: 1px solid silver;
+	color: #333333;
+	background-color: #E0E0E0;
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	z-index:-1;
+	
+/* Stan_rounded border of cards */
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+/* Stan_rounded border of cards END */
+}
+
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+<!--
+
+
+//MDH_SCORM modification to support SCORM 1.2 functionality on LMS
+/* JavaScript to find the SCORM API if it is available */
+/* Based on a model at <http://www.claroline.net/doc/en/index.php/How_do_I_create_SCORM_content%3F> */
+
+var API = null; /* SCORM API */
+
+/* look up through the frameset hierarchy for the SCORM API */
+function findAPI(win)
+{
+	while ((win.API == null) && (win.parent != null) && (win.parent != win))
+	{
+		win = win.parent;
+	}
+	API = win.API;
+}
+
+/* initialize the SCORM API */
+function initAPI(win)
+{
+	/* look for the SCORM API up in the frameset */
+	findAPI(win);
+
+	/* if we still have not found the API, look at the opener and its frameset */
+	if ((API == null) && (win.opener != null))
+	{
+		findAPI(win.opener);
+	}
+}
+
+var ScormSubmitted = false; //use this to check whether LMSFinish has been called later.
+
+function ScormStartUp(){
+	initAPI(window);
+	if (API != null){
+		API.LMSInitialize(''); 
+		API.LMSSetValue('cmi.core.lesson_status', 'browsed');
+		API.LMSSetValue('cmi.core.score.min', 0);
+		API.LMSSetValue('cmi.core.score.max', 100);
+		API.LMSCommit('');
+	}
+}
+
+function CheckLMSFinish(){
+	if (API != null){
+		if (ScormSubmitted == false){
+			API.LMSCommit('');
+			API.LMSFinish('');
+			ScormSubmitted = true;
+		}
+	}
+}
+
+function SetScormIncomplete(){
+	if (ScormSubmitted == true){
+		return;
+	}
+	SetScormScore();
+	if (API != null){
+		API.LMSSetValue('cmi.core.lesson_status', 'incomplete');
+		API.LMSSetValue('cmi.core.session_time', MillisecondsToTime((new Date()).getTime() - ScormStartTime));
+		API.LMSCommit('');
+	}
+}
+
+function SetScormComplete(){
+	if (API != null){
+		API.LMSSetValue('cmi.core.session_time', MillisecondsToTime((new Date()).getTime() - ScormStartTime));
+		API.LMSSetValue('cmi.core.lesson_status', 'completed');
+		SetScormScore();
+		API.LMSCommit('');
+		API.LMSFinish('');
+		ScormSubmitted = true;
+	}
+}
+
+var ScormStartTime = (new Date()).getTime();
+
+var SuspendData = '';
+
+function SetScormTimedOut(){
+	if (API != null){
+		if (ScormSubmitted == false){
+			SetScormScore();
+			API.LMSSetValue('cmi.core.exit', 'time-out'); 
+			API.LMSCommit('');
+			CheckLMSFinish();
+		}
+	}
+}
+
+//TIME RENDERING FUNCTION
+function MillisecondsToTime(Seconds){
+	Seconds = Math.round(Seconds/1000);
+	var S = Seconds % 60;
+	Seconds -= S;
+	if (S < 10){S = '0' + S;}
+	var M = (Seconds / 60) % 60;
+	if (M < 10){M = '0' + M;}
+	var H = Math.floor(Seconds / 3600);
+	if (H < 10){H = '0' + H;}
+	return H + ':' + M + ':' + S;
+}
+
+
+
+
+function Client(){
+//if not a DOM browser, hopeless
+	this.min = false; if (document.getElementById){this.min = true;};
+
+	this.ua = navigator.userAgent;
+	this.name = navigator.appName;
+	this.ver = navigator.appVersion;  
+
+//Get data about the browser
+	this.mac = (this.ver.indexOf('Mac') != -1);
+	this.win = (this.ver.indexOf('Windows') != -1);
+
+//Look for Gecko
+	this.gecko = (this.ua.indexOf('Gecko') > 1);
+	if (this.gecko){
+		this.geckoVer = parseInt(this.ua.substring(this.ua.indexOf('Gecko')+6, this.ua.length));
+//		if (this.geckoVer < 20020000){this.min = false;}
+	}
+	
+//Look for Firebird
+	this.firebird = (this.ua.indexOf('Firebird') > 1);
+	
+//Look for Safari
+	this.safari = (this.ua.indexOf('Safari') > 1);
+	if (this.safari){
+		this.gecko = false;
+	}
+	
+//Look for IE
+	this.ie = (this.ua.indexOf('MSIE') > 0);
+	if (this.ie){
+		this.ieVer = parseFloat(this.ua.substring(this.ua.indexOf('MSIE')+5, this.ua.length));
+		if (this.ieVer < 5.5){this.min = false;}
+	}
+	
+//Look for Opera
+	this.opera = (this.ua.indexOf('Opera') > 0);
+	if (this.opera){
+		this.operaVer = parseFloat(this.ua.substring(this.ua.indexOf('Opera')+6, this.ua.length));
+		if (this.operaVer < 7.04){this.min = false;}
+	}
+	if (this.min == false){
+//		alert('Your browser may not be able to handle this page.');
+	}
+	
+//Special case for the horrible ie5mac
+	this.ie5mac = (this.ie&&this.mac&&(this.ieVer<6));
+}
+
+var C = new Client();
+
+//for (prop in C){
+//	alert(prop + ': ' + C[prop]);
+//}
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+//[strNavBarJS]
+function NavBtnOver(Btn){
+	if (Btn.className != 'NavButtonDown'){Btn.className = 'NavButtonUp';}
+}
+
+function NavBtnOut(Btn){
+	Btn.className = 'NavButton';
+}
+
+function NavBtnDown(Btn){
+	Btn.className = 'NavButtonDown';
+}
+//[/strNavBarJS]
+
+function FuncBtnOver(Btn){
+	if (Btn.className != 'FuncButtonDown'){Btn.className = 'FuncButtonUp';}
+}
+
+function FuncBtnOut(Btn){
+	Btn.className = 'FuncButton';
+}
+
+function FuncBtnDown(Btn){
+	Btn.className = 'FuncButtonDown';
+}
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+//	RefreshImages();
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+				//get Mac FireFox to manipulate display, to force screen redraw
+				if (C.mac && C.gecko) {Els[i].style.display = '';}
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+				if (C.mac && C.gecko) {Els[i].style.display = 'none';}
+			}
+		} 
+		else {
+			// tagName is either input or select (that is, Form Elements)
+			// ie6 has a problem with Form elements, so manipulate those
+			if (C.ie) {
+				if (C.ieVer < 7) {
+					if (Show == true){
+						Els[i].style.visibility = 'visible';
+					}
+					else{
+						Els[i].style.visibility = 'hidden';
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+	if (Finished == true){
+		Finish();
+	}
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].clientWidth;
+	this.H = document.getElementsByTagName('body')[0].clientHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	if (C.ie) {
+		thisKey = window.event.keyCode;
+	}
+	else {
+		thisKey = e.keyCode;
+	}
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+	}
+
+	if (Suppress == true){
+		if (C.ie){
+			window.event.returnValue = false;	
+			window.event.cancelBubble = true;
+		}
+		else{
+			e.preventDefault();
+		}
+	}
+}
+
+if (C.ie){
+	document.attachEvent('onkeydown',SuppressBackspace);
+	window.attachEvent('onkeydown',SuppressBackspace);
+}
+else{
+	if (window.addEventListener){
+		window.addEventListener('keypress',SuppressBackspace,false);
+	}
+}
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+	RefreshImages();
+
+}
+
+
+
+Imgs = new Array();
+
+function PreloadImages(){
+	var a = PreloadImages.arguments;
+	for (var i=0; i<a.length; i++){
+		Imgs[i] = new Image();
+		Imgs[i].src = a[i];
+	}
+}
+
+function RefreshImages(){
+	for (var i=0; i<document.images.length; i++){
+		if (document.images[i].name.substring(0,6) != 'NavBar'){
+			document.images[i].src = document.images[i].src;
+		}
+	}
+}
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+//EXTENSION TO ARRAY OBJECT
+function Array_IndexOf(Input){
+	var Result = -1;
+	for (var i=0; i<this.length; i++){
+		if (this[i] == Input){
+			Result = i;
+		}
+	}
+	return Result;
+}
+Array.prototype.indexOf = Array_IndexOf;
+
+//IE HAS RENDERING BUG WITH BOTTOM NAVBAR
+function RemoveBottomNavBarForIE(){
+	if ((C.ie)&&(document.getElementById('Reading') != null)){
+		if (document.getElementById('BottomNavBar') != null){
+			document.getElementById('TheBody').removeChild(document.getElementById('BottomNavBar'));
+		}
+	}
+}
+
+
+
+
+//HOTPOTNET-RELATED CODE
+
+var HPNStartTime = (new Date()).getTime();
+var SubmissionTimeout = 30000;
+var Detail = ''; //Global that is used to submit tracking data
+
+function Finish(){
+//If there's a form, fill it out and submit it
+	if (document.store != null){
+		Frm = document.store;
+		Frm.starttime.value = HPNStartTime;
+		Frm.endtime.value = (new Date()).getTime();
+		Frm.mark.value = Score;
+		Frm.detail.value = Detail;
+		Frm.submit();
+	}
+}
+
+
+
+
+//JCLOZE-SPECIFIC SCORM-RELATED JAVASCRIPT CODE
+
+function SetScormScore(){
+//Reports the current score and any other information back to the LMS
+	if (API != null){
+		API.LMSSetValue('cmi.core.score.raw', Score);
+//Now send detailed reports about each item
+		for (var i=0; i<State.length; i++){
+			var ThisItemGuesses = '';
+			var GapLabel = 'Gap_' + (i+1).toString();	
+			var ThisItemScore = Math.floor(State[i].ItemScore * 100) + '';
+			API.LMSSetValue('cmi.objectives.' + i + '.id', 'obj'+GapLabel);
+			API.LMSSetValue('cmi.interactions.' + i + '.id', 'int'+GapLabel);
+			API.LMSSetValue('cmi.objectives.' + i + '.score.raw', ThisItemScore);
+			API.LMSSetValue('cmi.objectives.' + i + '.score.min', '0');
+			API.LMSSetValue('cmi.objectives.' + i + '.score.max', '100');
+			if (State[i].AnsweredCorrectly == true){
+				API.LMSSetValue('cmi.objectives.' + i + '.status', 'completed');
+			}
+			else{
+				API.LMSSetValue('cmi.objectives.' + i + '.status', 'incomplete');
+			}
+			for (var j=0; j<State[i].Guesses.length; j++){
+				if (j>0){ThisItemGuesses += ' | ';}
+				ThisItemGuesses += State[i].Guesses[j];	
+			}	
+			API.LMSSetValue('cmi.interactions.' + i + '.type', 'fill-in');
+			API.LMSSetValue('cmi.interactions.' + i + '.student_response', ThisItemGuesses);
+		}		
+		API.LMSCommit('');
+	}
+}
+
+
+//JCLOZE CORE JAVASCRIPT CODE
+
+function ItemState(){
+	this.ClueGiven = false;
+	this.HintsAndChecks = 0;
+	this.MatchedAnswerLength = 0;
+	this.ItemScore = 0;
+	this.AnsweredCorrectly = false;
+	this.Guesses = new Array();
+	return this;
+}
+
+var Feedback = '';
+var Correct = 'Goed zo!.';
+var Incorrect = 'Enkele antwoorden zijn fout. Foute antwoorden zijn blijven staan en kan je verbeteren.'; 
+var GiveHint = 'De volgende juiste letter is toegevoegd. Klik eerst op OK om een volgende letter toe te voegen.';
+var CaseSensitive = true;
+var YourScoreIs = 'Je score is ';
+var Finished = false;
+var Locked = false;
+var Score = 0;
+var CurrentWord = 0;
+var Guesses = '';
+var TimeOver = false;
+
+I = new Array();
+
+I[0] = new Array();
+I[0][1] = new Array();
+I[0][1][0] = new Array();
+I[0][1][0][0] = '\u0057\u0069\u0065';
+I[0][2]='';
+
+I[1] = new Array();
+I[1][1] = new Array();
+I[1][1][0] = new Array();
+I[1][1][0][0] = '\u0057\u0061\u0061\u0072';
+I[1][2]='';
+
+I[2] = new Array();
+I[2][1] = new Array();
+I[2][1][0] = new Array();
+I[2][1][0][0] = '\u0057\u0061\u006E\u006E\u0065\u0065\u0072';
+I[2][2]='';
+
+I[3] = new Array();
+I[3][1] = new Array();
+I[3][1][0] = new Array();
+I[3][1][0][0] = '\u0048\u006F\u0065';
+I[3][2]='';
+
+I[4] = new Array();
+I[4][1] = new Array();
+I[4][1][0] = new Array();
+I[4][1][0][0] = '\u0057\u0061\u0074';
+I[4][2]='';
+
+I[5] = new Array();
+I[5][1] = new Array();
+I[5][1][0] = new Array();
+I[5][1][0][0] = '\u0048\u006F\u0065\u0076\u0065\u0065\u006C';
+I[5][2]='';
+
+I[6] = new Array();
+I[6][1] = new Array();
+I[6][1][0] = new Array();
+I[6][1][0][0] = '\u0057\u0065\u006C\u006B\u0065';
+I[6][2]='';
+
+
+State = new Array();
+
+function StartUp(){
+	RemoveBottomNavBarForIE();
+//Show a keypad if there is one	(added bugfix for 6.0.4.12)
+	if (document.getElementById('CharacterKeypad') != null){
+		document.getElementById('CharacterKeypad').style.display = 'block';
+	}
+	
+
+	ScormStartUp();
+
+
+
+
+
+	PreloadImages('Andy.jpg');
+
+
+	var i = 0;
+
+	State.length = 0;
+	for (i=0; i<I.length; i++){
+		State[i] = new ItemState();
+	}
+	
+	ClearTextBoxes();
+	
+
+
+}
+
+function ShowClue(ItemNum){
+	if (Locked == true){return;}
+	State[ItemNum].ClueGiven = true;
+	ShowMessage(I[ItemNum][2]);
+}
+
+function SaveCurrentAnswers(){
+	var Ans = '';
+	for (var i=0; i<I.length; i++){
+		Ans = GetGapValue(i);
+		if ((Ans.length > 0)&&(Ans != State[i].Guesses[State[i].Guesses.length-1])){
+			State[i].Guesses[State[i].Guesses.length] = Ans;
+		}
+	}
+}
+
+function CompileGuesses(){
+	var F = document.getElementById('store');
+	if (F != null){
+		var Temp = '<?xml version="1.0"?><hpnetresult><fields>';
+		var GapLabel = '';
+		for (var i=0; i<State.length; i++){
+			GapLabel = 'Gap ' + (i+1).toString();
+			Temp += '<field><fieldname>' + GapLabel + '</fieldname>';
+			Temp += '<fieldtype>student-responses</fieldtype><fieldlabel>' + GapLabel + '</fieldlabel>';
+			Temp += '<fieldlabelid>JClozeStudentResponses</fieldlabelid><fielddata>';
+			for (var j=0; j<State[i].Guesses.length; j++){
+				if (j>0){Temp += '| ';}
+				Temp += State[i].Guesses[j] + ' ';	
+			}	
+  		Temp += '</fielddata></field>';
+		}
+		Temp += '</fields></hpnetresult>';
+		Detail = Temp;
+	}
+}
+
+function CheckAnswers(){
+	if (Locked == true){return;}
+	SaveCurrentAnswers();
+	var AllCorrect = true;
+
+//Check each answer
+	for (var i = 0; i<I.length; i++){
+
+		if (State[i].AnsweredCorrectly == false){
+//If it's right, calculate its score
+			if (CheckAnswer(i, true) > -1){
+				var TotalChars = GetGapValue(i).length;
+				State[i].ItemScore = (TotalChars-State[i].HintsAndChecks)/TotalChars;
+				if (State[i].ClueGiven == true){State[i].ItemScore /= 2;}
+				if (State[i].ItemScore <0 ){State[i].ItemScore = 0;}
+				State[i].AnsweredCorrectly = true;
+//Drop the correct answer into the page, replacing the text box
+				SetCorrectAnswer(i, GetGapValue(i));
+			}
+			else{
+//Otherwise, increment the hints for this item, as a penalty
+				State[i].HintsAndChecks++;
+
+//then set the flag
+				AllCorrect = false;
+			}
+		}
+	}
+
+//Calculate the total score
+	var TotalScore = 0;
+	for (i=0; i<State.length; i++){
+		TotalScore += State[i].ItemScore;
+	}
+	TotalScore = Math.floor((TotalScore * 100)/I.length);
+
+//Compile the output
+	Output = '';
+
+	if (AllCorrect == true){
+		Output = Correct + '<br />';
+	}
+
+	Output += YourScoreIs + ' ' + TotalScore + '%.<br />';
+	if (AllCorrect == false){
+		Output += Incorrect;
+	}
+	ShowMessage(Output);
+	setTimeout('WriteToInstructions(strInstructions)', 50);
+	
+	Score = TotalScore;
+	CompileGuesses();
+	
+	if ((AllCorrect == true)||(Finished == true)){
+	
+
+
+		TimeOver = true;
+		Locked = true;
+		Finished = true;
+		setTimeout('Finish()', SubmissionTimeout);
+	}
+
+	if (AllCorrect == true){
+		SetScormComplete();
+	}
+	else{
+		SetScormIncomplete();
+	}
+
+}
+
+function TrackFocus(BoxNumber){
+	CurrentWord = BoxNumber;
+	InTextBox = true;
+}
+
+function LeaveGap(){
+	InTextBox = false;
+}
+
+function CheckBeginning(Guess, Answer){
+	var OutString = '';
+	var i = 0;
+	var UpperGuess = '';
+	var UpperAnswer = '';
+
+	if (CaseSensitive == false) {
+		UpperGuess = Guess.toUpperCase();
+		UpperAnswer = Answer.toUpperCase();
+	}
+	else {
+		UpperGuess = Guess;
+		UpperAnswer = Answer;
+	}
+
+	while (UpperGuess.charAt(i) == UpperAnswer.charAt(i)) {
+		OutString += Guess.charAt(i);
+		i++;
+	}
+	OutString += Answer.charAt(i);
+	return OutString;
+}
+
+function GetGapValue(GNum){
+	var RetVal = '';
+	if ((GNum<0)||(GNum>=I.length)){return RetVal;}
+	if (document.getElementById('Gap' + GNum) != null){
+		RetVal = document.getElementById('Gap' + GNum).value;
+		RetVal = TrimString(RetVal);
+	}
+	else{
+		RetVal = State[GNum].Guesses[State[GNum].Guesses.length-1];
+	}
+	return RetVal;
+}
+
+function SetGapValue(GNum, Val){
+	if ((GNum<0)||(GNum>=I.length)){return;}
+	if (document.getElementById('Gap' + GNum) != null){
+		document.getElementById('Gap' + GNum).value = Val;
+		document.getElementById('Gap' + GNum).focus();
+	}
+}
+
+function SetCorrectAnswer(GNum, Val){
+	if ((GNum<0)||(GNum>=I.length)){return;}
+	if (document.getElementById('GapSpan' + GNum) != null){
+		document.getElementById('GapSpan' + GNum).innerHTML = Val;
+	}
+}
+
+function FindCurrent() {
+	var x = 0;
+	FoundCurrent = -1;
+
+//Test the current word:
+//If its state is not set to already correct, check the word.
+	if (State[CurrentWord].AnsweredCorrectly == false){
+		if (CheckAnswer(CurrentWord, false) < 0){
+			return CurrentWord;
+		}
+	}
+	
+	x=CurrentWord + 1;
+	while (x<I.length){
+		if (State[x].AnsweredCorrectly == false){
+			if (CheckAnswer(x, false) < 0){
+				return x;
+			}
+		}
+	x++;	
+	}
+
+	x = 0;
+	while (x<CurrentWord){
+		if (State[x].AnsweredCorrectly == false){
+			if (CheckAnswer(x, false) < 0){
+				return x;
+			}
+		}
+	x++;	
+	}
+	return FoundCurrent;
+}
+
+function CheckAnswer(GapNum, MarkAnswer){
+	var Guess = GetGapValue(GapNum);
+	var UpperGuess = '';
+	var UpperAnswer = '';
+	if (CaseSensitive == false){
+		UpperGuess = Guess.toUpperCase();
+	}
+	else{
+		UpperGuess = Guess;
+	}
+	var Match = -1;
+	for (var i = 0; i<I[GapNum][1].length; i++){
+		if (CaseSensitive == false){
+			UpperAnswer = I[GapNum][1][i][0].toUpperCase();
+		}
+		else{
+			UpperAnswer = I[GapNum][1][i][0];
+		}
+		if (TrimString(UpperGuess) == UpperAnswer){
+			Match = i;
+			if (MarkAnswer == true){
+				State[GapNum].AnsweredCorrectly = true;
+			}
+		}
+	}
+	return Match;
+}
+
+function GetHint(GapNum){
+	Guess = GetGapValue(GapNum);
+
+	if (CheckAnswer(GapNum, false) > -1){return ''}
+	RightBits = new Array();
+	for (var i=0; i<I[GapNum][1].length; i++){
+		RightBits[i] = CheckBeginning(Guess, I[GapNum][1][i][0]);
+	}
+	var RightOne = FindLongest(RightBits);
+	var Result = I[GapNum][1][RightOne][0].substring(0,RightBits[RightOne].length);
+//Add another char if the last one is a space
+	if (Result.charAt(Result.length-1) == ' '){
+		Result = I[GapNum][1][RightOne][0].substring(0,RightBits[RightOne].length+1);
+	}
+	return Result;
+}
+
+function ShowHint(){
+	if (document.getElementById('FeedbackDiv').style.display == 'block'){return;}
+	if (Locked == true){return;}
+	var CurrGap = FindCurrent();
+	if (CurrGap < 0){return;}
+
+	var HintString = GetHint(CurrGap);
+
+	if (HintString.length > 0){
+		SetGapValue(CurrGap, HintString);
+		State[CurrGap].HintsAndChecks += 1;
+	}
+	ShowMessage(GiveHint);
+}
+
+function TypeChars(Chars){
+	var CurrGap = FindCurrent();
+	if (CurrGap < 0){return;}
+	if (document.getElementById('Gap' + CurrGap) != null){
+		SetGapValue(CurrGap, document.getElementById('Gap' + CurrGap).value + Chars);
+	}
+}
+
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onLoad="StartUp()" id="TheBody" onunload="CheckLMSFinish()">
+
+<!-- BeginTopNavButtons -->
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle">Vraagwoorden</h2>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions">Gebruik de juiste vraagwoorden in de volgende tekst.<br />Let op het gebruik van hoofdletters.</div>
+</div>
+
+
+
+
+
+<div id="MainDiv" class="StdDiv">
+
+<!-- These top buttons hidden; reveal if required -->
+<!--
+<button id="CheckButton1" class="FuncButton" onmouseover="FuncBtnOver(this)" onfocus="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onblur="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" onclick="CheckAnswers()">&#160;Controleer&#160;</button>
+
+
+<button class="FuncButton" onmouseover="FuncBtnOver(this)" onfocus="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onblur="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" onclick="ShowHint()">&#160;Toon volgende letter&#160;</button>
+
+
+ -->
+ 
+<div id="ClozeDiv">
+<form id="Cloze" method="post" action="U+0020" onSubmit="return false;">
+<div class="ClozeBody">
+<img src="Andy.jpg" style="float: left; margin-right:10px;"></img>Hallo, ik ben Andy. <span class="GapSpan" id="GapSpan0"><input type="text" id="Gap0" onfocus="TrackFocus(0)" onblur="LeaveGap()" class="GapBox" size="6"></input></span> ben jij?<br />Ik woon in Leuven. <span class="GapSpan" id="GapSpan1"><input type="text" id="Gap1" onfocus="TrackFocus(1)" onblur="LeaveGap()" class="GapBox" size="6"></input></span> woon jij?<br />Ik ben geboren in 1981. <span class="GapSpan" id="GapSpan2"><input type="text" id="Gap2" onfocus="TrackFocus(2)" onblur="LeaveGap()" class="GapBox" size="7"></input></span> ben jij geboren?<br />Ik kom met de fiets naar school. <span class="GapSpan" id="GapSpan3"><input type="text" id="Gap3" onfocus="TrackFocus(3)" onblur="LeaveGap()" class="GapBox" size="6"></input></span> kom jij naar school?<br />Mijn familienaam is Dupont. <span class="GapSpan" id="GapSpan4"><input type="text" id="Gap4" onfocus="TrackFocus(4)" onblur="LeaveGap()" class="GapBox" size="6"></input></span> is jouw familienaam?<br />Ik heb twee kinderen. <span class="GapSpan" id="GapSpan5"><input type="text" id="Gap5" onfocus="TrackFocus(5)" onblur="LeaveGap()" class="GapBox" size="7"></input></span> kinderen heb jij?<br />Ik spreek Frans en een beetje Nederlands. <span class="GapSpan" id="GapSpan6"><input type="text" id="Gap6" onfocus="TrackFocus(6)" onblur="LeaveGap()" class="GapBox" size="6"></input></span> talen spreek jij?
+</div>
+</form>
+</div>
+
+
+
+<button id="CheckButton2" class="FuncButton" onMouseOver="FuncBtnOver(this)" onFocus="FuncBtnOver(this)" onMouseOut="FuncBtnOut(this)" onBlur="FuncBtnOut(this)" onMouseDown="FuncBtnDown(this)" onMouseUp="FuncBtnOut(this)" onClick="CheckAnswers()">&#160;Controleer&#160;</button>
+
+
+<button class="FuncButton" onMouseOver="FuncBtnOver(this)" onFocus="FuncBtnOver(this)" onMouseOut="FuncBtnOut(this)" onBlur="FuncBtnOut(this)" onMouseDown="FuncBtnDown(this)" onMouseUp="FuncBtnOut(this)" onClick="ShowHint()">&#160;Toon volgende letter&#160;</button>
+
+
+</div>
+
+
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onFocus="FuncBtnOver(this)" onBlur="FuncBtnOut(this)" onMouseOver="FuncBtnOver(this)" onMouseOut="FuncBtnOut(this)" onMouseDown="FuncBtnDown(this)" onMouseUp="FuncBtnOut(this)" onClick="HideFeedback(); return false;">&#160;OK&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+</html>

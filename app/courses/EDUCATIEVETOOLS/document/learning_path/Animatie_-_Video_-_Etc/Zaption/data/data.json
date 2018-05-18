@@ -1,0 +1,264 @@
+{
+    "_id": "577621a3a758c7ca26ca23df",
+    "ownerName": "Annick Vdp",
+    "owner": "56b5d78788e92db0756f4e79",
+    "_acl": {
+        "write": [
+            "56b5d78788e92db0756f4e79"
+        ],
+        "read": [
+            "56b5d78788e92db0756f4e79",
+            "public"
+        ]
+    },
+    "thumbLocation": "//i.ytimg.com/vi/L2IVx7Cp0ug/default.jpg",
+    "deleted": false,
+    "dateUpdated": "2016-07-01T08:10:29.911Z",
+    "dateCreated": "2016-07-01T07:54:11.333Z",
+    "grants": [],
+    "editorsAllowed": false,
+    "completionPoints": 0,
+    "isSample": false,
+    "noNameRequired": false,
+    "shortCode": "uuwkn7z",
+    "whitelist": false,
+    "open": true,
+    "ltiIds": [],
+    "published": true,
+    "elements": [
+        {
+            "_id": "57762219f1ff0223b400000e",
+            "clip": "577621d3f1ff0223b4000005",
+            "elementType": "TextScreen",
+            "space": "Sidebar",
+            "inTime": 4.922429787234042,
+            "outTime": 5.122429787234042,
+            "text": "<p><br/></p><p>Wat een aanbod!</p><p><br/></p><p>Meer dan 30 opleidingen</p><p>in 10 opleidingsgebieden.</p><p><br/></p>",
+            "prompt": "",
+            "children": [],
+            "choices": [],
+            "imageTop": 0,
+            "imageLeft": 0,
+            "backgroundColor": "semitransparent",
+            "points": 1,
+            "actions": [],
+            "stopVideo": true,
+            "dateCreated": "2016-07-01T07:56:09.792Z"
+        },
+        {
+            "_id": "57762298f1ff0223b400004d",
+            "clip": "577621d3f1ff0223b4000005",
+            "elementType": "MultipleChoice",
+            "space": "Sidebar",
+            "inTime": 9.0138,
+            "outTime": 9.213799999999999,
+            "text": "",
+            "prompt": "<p>Kan je computercursussen volgen met e-learning?</p>",
+            "children": [],
+            "choices": [
+                {
+                    "_id": "57762298f1ff0223b400004e",
+                    "text": "Ja"
+                },
+                {
+                    "_id": "57762298f1ff0223b400004f",
+                    "text": "Nee"
+                }
+            ],
+            "imageTop": 0,
+            "imageLeft": 0,
+            "backgroundColor": "semitransparent",
+            "points": 1,
+            "actions": [
+                {
+                    "_id": "577622b4f1ff0223b4000070",
+                    "criteria": {
+                        "choice": "57762298f1ff0223b400004e"
+                    },
+                    "feedbackType": "Correct",
+                    "feedbackText": "Inderdaad! Een aantal contactmomenten worden vervangen door een online afstandsles."
+                },
+                {
+                    "_id": "577622b4f1ff0223b4000072",
+                    "criteria": {
+                        "choice": "57762298f1ff0223b400004f"
+                    },
+                    "feedbackType": "Incorrect",
+                    "feedbackText": "Toch wel, een aantal contactmomenten worden dan vervangen door een online afstandsles."
+                }
+            ],
+            "stopVideo": true,
+            "dateCreated": "2016-07-01T07:58:16.917Z"
+        },
+        {
+            "_id": "57762331f1ff0223b4000101",
+            "clip": "577621d3f1ff0223b4000005",
+            "elementType": "CheckBoxes",
+            "space": "Sidebar",
+            "inTime": 12.497857446808512,
+            "outTime": 12.697857446808511,
+            "text": "",
+            "prompt": "<p>Welke taal kan je leren in CVO Volt?</p>",
+            "children": [],
+            "choices": [
+                {
+                    "_id": "57762331f1ff0223b4000102",
+                    "text": "Engels"
+                },
+                {
+                    "_id": "57762331f1ff0223b4000103",
+                    "text": "Nederlands"
+                },
+                {
+                    "_id": "57762353f1ff0223b4000132",
+                    "text": "Portugees"
+                },
+                {
+                    "_id": "5776236df1ff0223b400013e",
+                    "text": "Frans"
+                },
+                {
+                    "_id": "57762374f1ff0223b400014b",
+                    "text": "Duits"
+                }
+            ],
+            "imageTop": 0,
+            "imageLeft": 0,
+            "backgroundColor": "semitransparent",
+            "points": 1,
+            "actions": [
+                {
+                    "_id": "57762349f1ff0223b4000121",
+                    "criteria": {
+                        "@and": [
+                            {
+                                "checked": {
+                                    "@contain": "57762331f1ff0223b4000102"
+                                }
+                            },
+                            {
+                                "checked": {
+                                    "@contain": "57762331f1ff0223b4000103"
+                                }
+                            },
+                            {
+                                "checked": {
+                                    "@ncontain": "57762353f1ff0223b4000132"
+                                }
+                            },
+                            {
+                                "checked": {
+                                    "@contain": "5776236df1ff0223b400013e"
+                                }
+                            },
+                            {
+                                "checked": {
+                                    "@contain": "57762374f1ff0223b400014b"
+                                }
+                            }
+                        ]
+                    },
+                    "feedbackType": "Correct"
+                },
+                {
+                    "_id": "57762349f1ff0223b4000123",
+                    "criteria": {
+                        "@or": [
+                            {
+                                "checked": {
+                                    "@ncontain": "57762331f1ff0223b4000102"
+                                }
+                            },
+                            {
+                                "checked": {
+                                    "@ncontain": "57762331f1ff0223b4000103"
+                                }
+                            },
+                            {
+                                "checked": {
+                                    "@contain": "57762353f1ff0223b4000132"
+                                }
+                            },
+                            {
+                                "checked": {
+                                    "@ncontain": "5776236df1ff0223b400013e"
+                                }
+                            },
+                            {
+                                "checked": {
+                                    "@ncontain": "57762374f1ff0223b400014b"
+                                }
+                            }
+                        ]
+                    },
+                    "feedbackType": "Incorrect"
+                }
+            ],
+            "stopVideo": true,
+            "dateCreated": "2016-07-01T08:00:49.681Z"
+        },
+        {
+            "_id": "577623a9f1ff0223b400015f",
+            "clip": "577621d3f1ff0223b4000005",
+            "elementType": "TextScreen",
+            "space": "Sidebar",
+            "inTime": 17.292431914893616,
+            "outTime": 17.492431914893615,
+            "text": "<p>Groot aanbod technische opleidingen, voeding en tuin!</p>",
+            "prompt": "",
+            "children": [],
+            "choices": [],
+            "imageTop": 0,
+            "imageLeft": 0,
+            "backgroundColor": "semitransparent",
+            "points": 1,
+            "actions": [],
+            "stopVideo": true,
+            "dateCreated": "2016-07-01T08:02:49.038Z"
+        },
+        {
+            "_id": "5776243af1ff0223b4000183",
+            "clip": "577621d3f1ff0223b4000005",
+            "elementType": "TextScreen",
+            "space": "Sidebar",
+            "inTime": 20.9363085106383,
+            "outTime": 21.136308510638298,
+            "text": "<p>Bibliotheek, HBO5 en tweedekans onderwijs!</p>",
+            "prompt": "",
+            "children": [],
+            "choices": [],
+            "imageTop": 0,
+            "imageLeft": 0,
+            "backgroundColor": "semitransparent",
+            "points": 1,
+            "actions": [],
+            "stopVideo": true,
+            "dateCreated": "2016-07-01T08:05:14.059Z"
+        }
+    ],
+    "clips": [
+        {
+            "_id": "577621d3f1ff0223b4000005",
+            "video": "577621de51edc7fc24beca61",
+            "videoLocation": "L2IVx7Cp0ug",
+            "videoDuration": 30.046,
+            "videoType": "YouTube",
+            "mute": false,
+            "thumbLocation": "//i.ytimg.com/vi/L2IVx7Cp0ug/default.jpg",
+            "text": "CVO VOLT cursussen met e-learning",
+            "outTime": 30.046,
+            "inTime": 0
+        }
+    ],
+    "frameURL": "",
+    "responsesRequired": false,
+    "lockPlaybackRate": false,
+    "preventNavigationForward": false,
+    "preventNavigation": false,
+    "tags": [],
+    "description": "",
+    "__v": 0,
+    "name": "CVO VOLT promotiefilmpje",
+    "name_lowercase": "cvo volt promotiefilmpje",
+    "datePublished": "2016-07-01T08:10:26.861Z"
+}
